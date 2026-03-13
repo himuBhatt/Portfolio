@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 5%;
+    --foreground: 200 100% 95%;
+
+    --card: 230 25% 8%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 230 25% 8%;
+    --popover-foreground: 200 100% 95%;
+
+    --primary: 185 100% 50%;
+    --primary-foreground: 230 25% 5%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 200 100% 95%;
+
+    --muted: 230 20% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 210 100% 60%;
+    --accent-foreground: 200 100% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 185 100% 50%;
+
+    --radius: 0.75rem;
+
+    --neon-cyan: 185 100% 50%;
+    --neon-purple: 262 83% 58%;
+    --neon-blue: 210 100% 60%;
+    --glass: 230 25% 12%;
+    --glass-border: 230 20% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: hsl(185 100% 50% / 0.3);
+    color: hsl(200 100% 95%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(230 25% 5%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(185 100% 50% / 0.3);
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass/40 backdrop-blur-xl border border-glass-border/30 rounded-xl;
+    box-shadow: 
+      0 0 30px -10px hsl(var(--neon-cyan) / 0.1),
+      inset 0 1px 0 0 hsl(var(--glass-border) / 0.3);
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5),
+                 0 0 40px hsl(var(--neon-cyan) / 0.2);
+  }
+
+  .neon-glow-purple {
+    text-shadow: 0 0 10px hsl(var(--neon-purple) / 0.5),
+                 0 0 40px hsl(var(--neon-purple) / 0.2);
+  }
+
+  .neon-border {
+    box-shadow: 0 0 15px -3px hsl(var(--neon-cyan) / 0.3),
+                0 0 30px -5px hsl(var(--neon-cyan) / 0.1),
+                inset 0 1px 0 0 hsl(var(--neon-cyan) / 0.1);
+  }
+
+  .neon-border-purple {
+    box-shadow: 0 0 15px -3px hsl(var(--neon-purple) / 0.3),
+                0 0 30px -5px hsl(var(--neon-purple) / 0.1),
+                inset 0 1px 0 0 hsl(var(--neon-purple) / 0.1);
+  }
+
+  .grid-bg {
+    background-image: 
+      linear-gradient(hsl(var(--neon-cyan) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--neon-cyan) / 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .scroll-progress {
+    @apply fixed top-0 left-0 h-[2px] bg-primary z-50;
+    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.8);
+  }
+}
