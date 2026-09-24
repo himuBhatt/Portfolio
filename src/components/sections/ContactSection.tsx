@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 const links = [
   {
     label: "GitHub",
-    href: "https://github.com/himanshu-bhatt",
+    href: "https://github.com/himuBhatt",
     icon: Github,
     color: "hover:text-primary hover:border-primary/30",
   },
