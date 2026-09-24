@@ -10,13 +10,13 @@ const links = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/himanshu-bhatt",
+    href: "https://linkedin.com/in/himanshu-bhatt-37377b3a9",
     icon: Linkedin,
     color: "hover:text-secondary hover:border-secondary/30",
   },
   {
     label: "Email",
-    href: "mailto:himanshu@example.com",
+    href: "mailto:ihimanshubhatthb@gmail.com",
     icon: Mail,
     color: "hover:text-accent hover:border-accent/30",
   },
