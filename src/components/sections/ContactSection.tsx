@@ -10,7 +10,7 @@ const links = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/himanshu-bhatt-37377b3a9",
+    href: "www.linkedin.com/in/himanshu-bhatt-37377b3a9",
     icon: Linkedin,
     color: "hover:text-secondary hover:border-secondary/30",
   },
