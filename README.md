@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to view.
+Open http:https://portfolio-neon-omega-64.vercel.app/ to view.
 
 ## Technologies
 
